@@ -1,5 +1,7 @@
 # Web - Angular/ReactJS Test Assignment
 
+[![codecov](https://codecov.io/gh/webcat12345/liu-zhang-web/branch/main/graph/badge.svg?token=V18YWQU9AU)](https://codecov.io/gh/webcat12345/liu-zhang-web)
+
 The goal is to create a simple web application which makes a request to an API, parses the response, and displays the result in the UI. The app will consist of **two major components** - one **search** component and one **results** component.
 
 ## Detail
