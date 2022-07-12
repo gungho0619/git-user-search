@@ -1,3 +1,8 @@
+export enum Type {
+  User = 'User',
+  Organization = 'Organization',
+}
+
 export interface User {
   id: number;
   login: string;
@@ -5,7 +10,7 @@ export interface User {
   node_id: string;
   score: number;
   site_admin: boolean;
-  type: string; // TODO: Maybe enum? Current value I see is "User"
+  type: Type;
 
   url: string;
   avatar_url: string;
