@@ -1,7 +1,11 @@
-<form class="w-full">
+<form class="w-full flex items-center" [formGroup]="form" (ngSubmit)="submit()">
   <mat-form-field class="w-1/2" appearance="outline">
-    <mat-label>Search</mat-label>
-    <input matInput />
+    <mat-label>Search by Login</mat-label>
+    <input matInput placeholder="Search users by login information..." formControlName="keyword" />
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
+
+  <div class="ml-15 mb-20">
+    <button mat-raised-button color="primary" class="h-[52px]"><span class="px-20 font-medium">Submit</span></button>
+  </div>
 </form>
