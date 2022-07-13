@@ -1,8 +1,11 @@
 <div class="mt-50">
-  <mat-card>
+  <mat-card class="overflow-hidden">
+    <app-spinner *ngIf="isLoading" text="Searching..."></app-spinner>
     <mat-card-title class="pt-20 px-15">Search from the GitHub</mat-card-title>
     <mat-card-content class="pt-20 px-15">
       <app-search-bar (search)="search($event)"></app-search-bar>
+
+      <app-result-table [result$]="result$" [reset$]="reset$" (change)="changeTable($event)"></app-result-table>
     </mat-card-content>
   </mat-card>
 </div>
