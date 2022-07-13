@@ -13,7 +13,7 @@ import { User } from '../models/user.model';
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  search(login: string, page = 1, direction: SortDirection, perPage = 9): Observable<SearchResult<User>> {
+  search(login: string, page = 1, direction: SortDirection = 'asc', perPage = 9): Observable<SearchResult<User>> {
     const url = `${environment.api}/search/users`;
     let params = new HttpParams().append('q', `${login} in:login`).append('per_page', perPage).append('page', page);
     if (direction) {
