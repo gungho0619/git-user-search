@@ -2,9 +2,57 @@
 
 [![codecov](https://codecov.io/gh/webcat12345/liu-zhang-web/branch/main/graph/badge.svg?token=V18YWQU9AU)](https://codecov.io/gh/webcat12345/liu-zhang-web)
 
+URL: https://webcat12345.github.io/liu-zhang-web/
+
 The goal is to create a simple web application which makes a request to an API, parses the response, and displays the result in the UI. The app will consist of **two major components** - one **search** component and one **results** component.
 
-## Detail
+## Notes from Liu Zhang
+
+### Problem
+
+After the investigation, I found that GitHub user search API not allowing sort by `login` at the moment, so Server-Side-Sort is actually not implemented.
+
+The desired method is already there, in the `user.service.ts` with `TODO` comment. But all functionalities from the front end side - table, pagination, sort actions are already done.
+
+### Additions
+
+- [Prettier](https://prettier.io/) for the code style check and cleanup
+- [Tailwind CSS](https://tailwindcss.com/) for the CSS library
+- [Angular Material & CDK](https://material.angular.io) for the general UI component library
+- [GitHub Pages](https://pages.github.com) for the deployment
+- [Codecov](https://about.codecov.io/) for the code coverage integration and pipelines
+
+### Git workflows
+
+- Every push will be tested via GitHub actions passing 3 steps - build, testing, code-coverage check.
+- `main` branch is connected with the server(GitHub Page), whenever you push your code to `main` branch, that will be deployed to the hosting.
+- Code coverage is listed on the README.md by default, you can click this [badge](#web---angularreactjs-test-assignment) to check the report more details.
+- Following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for commits.
+
+### Development guideline
+
+After clone the repository, following steps will allow you to set up the project on the local environment. 
+
+```bash
+$ # Install packages
+$ npm install
+$
+$ # Run project and check http://localhost:4200 from your browser
+$ npm start
+$
+$ # Run unit test (single run - capable for CI)
+$ npm run test
+$
+$ # Run unit test to generate code coverage
+$ npm run test:cov
+$
+$ # Build the project in production mode
+$ npm run build
+$
+$ # Other additional scripts can be found from the package.json - script section
+```
+
+## Original Requirements
 
 ### Search Component
 
